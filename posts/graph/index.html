@@ -1,0 +1,225 @@
+<!DOCTYPE html><!-- lang="th" is what makes browsers apply dictionary-based Thai line breaking. --><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v7.3.1"><title>Posts graph · Panthakan B · Blog</title><meta name="title" content="Posts graph · Panthakan B · Blog"><meta name="description" content="แผนผัง dependency ของทุกโพสต์ในบล็อกนี้ — คลิกบทหนึ่งเพื่อดูว่าต้องรู้อะไรมาก่อน"><meta name="author" content="Panthakan Boonsuriyatham"><link rel="canonical" href="https://panthbs.github.io/blog/posts/graph/"><link rel="icon" type="image/svg+xml" href="/blog/favicon.svg"><link rel="sitemap" href="/blog/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Panthakan B · Blog" href="/blog/rss.xml"><meta property="og:type" content="website"><meta property="og:url" content="https://panthbs.github.io/blog/posts/graph/"><meta property="og:title" content="Posts graph · Panthakan B · Blog"><meta property="og:description" content="แผนผัง dependency ของทุกโพสต์ในบล็อกนี้ — คลิกบทหนึ่งเพื่อดูว่าต้องรู้อะไรมาก่อน"><meta property="og:site_name" content="Panthakan B · Blog"><meta property="og:locale" content="th_TH"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Posts graph · Panthakan B · Blog"><meta name="twitter:description" content="แผนผัง dependency ของทุกโพสต์ในบล็อกนี้ — คลิกบทหนึ่งเพื่อดูว่าต้องรู้อะไรมาก่อน"><link rel="stylesheet" href="/blog/_astro/Layout.rH9yEdvH.css"></head><body><header class="site-header"><a class="site-title" href="/blog/">Panthakan B · Blog</a><nav><a href="/blog/about/">About</a><a href="/blog/">Posts</a><a href="/blog/tags/">Tags</a><a href="/blog/glossary/">Glossary</a><a href="/blog/course/nlp/">Course</a><a href="/blog/posts/graph/">Graph</a><a href="https://github.com/panthbs">GitHub</a><a href="/blog/rss.xml">RSS</a></nav></header><main><h1>แผนผังทั้งหมด</h1><div class="prose"><p>กราฟนี้รวมทุกบทของ <a href="/blog/course/nlp/">คอร์ส</a> และโพสต์เดี่ยว (กรณีศึกษา, off-arc) ไว้ในที่เดียว ลูกศรชี้จาก "สิ่งที่ต้องรู้ก่อน" ไปยังบทที่ต้องใช้มัน คลิกที่ node เพื่อไฮไลต์ทุกบทที่ต้องรู้ก่อนบทนั้นแบบ transitive (ไม่ใช่แค่บทที่ระบุตรง ๆ)</p><p class="muted">เขียนแล้ว 51 จาก 51 บท/โพสต์</p></div><div class="graph-wrap"><pre><code class="language-mermaid">---
+config:
+  layout: elk
+---
+flowchart TD
+classDef published fill:#4f7359,stroke:#4f7359,color:#ffffff
+classDef draft fill:#e5e5e5,stroke:#4f7359,color:#1a1a1a
+classDef planned fill:transparent,stroke:#9a9a9a,color:#9a9a9a,stroke-dasharray: 3 3
+n1_1[&quot;1.1&quot;]
+n1_2[&quot;1.2&quot;]
+n1_3[&quot;1.3&quot;]
+n1_4[&quot;1.4&quot;]
+n1_5[&quot;1.5&quot;]
+n2_1[&quot;2.1&quot;]
+n2_2[&quot;2.2&quot;]
+n2_3[&quot;2.3&quot;]
+n2_4[&quot;2.4&quot;]
+n3_1[&quot;3.1&quot;]
+n3_2[&quot;3.2&quot;]
+n3_3[&quot;3.3&quot;]
+n3_4[&quot;3.4&quot;]
+n3_5[&quot;3.5&quot;]
+n3_6[&quot;3.6&quot;]
+n3_7[&quot;3.7&quot;]
+n4_1[&quot;4.1&quot;]
+n4_2[&quot;4.2&quot;]
+n4_3[&quot;4.3&quot;]
+n4_4[&quot;4.4&quot;]
+n5_1[&quot;5.1&quot;]
+n5_2[&quot;5.2&quot;]
+n5_3[&quot;5.3&quot;]
+n5_4[&quot;5.4&quot;]
+n6_1[&quot;6.1&quot;]
+n6_2[&quot;6.2&quot;]
+n6_3[&quot;6.3&quot;]
+n6_4[&quot;6.4&quot;]
+n6_5[&quot;6.5&quot;]
+n6_6[&quot;6.6&quot;]
+n6_7[&quot;6.7&quot;]
+n6_8[&quot;6.8&quot;]
+n6_9[&quot;6.9&quot;]
+nbookrag[&quot;BOOKRAG&quot;]
+ndoclens[&quot;DOCLENS&quot;]
+ndos_rag[&quot;DOS-RAG&quot;]
+ndpr_nv_embed[&quot;DPR-NV-EMBED&quot;]
+ndsi[&quot;DSI&quot;]
+nhichunk[&quot;HICHUNK&quot;]
+nlongdocbench[&quot;LONGDOCBENCH&quot;]
+nraptor[&quot;RAPTOR&quot;]
+nshed[&quot;SHED&quot;]
+nsplade[&quot;SPLADE&quot;]
+nstair[&quot;STAIR&quot;]
+nsteds[&quot;STEDS&quot;]
+nbest_corpus[&quot;BEST-CORPUS&quot;]
+nbge_m3[&quot;BGE-M3&quot;]
+nthai_dictionary_tokenizers[&quot;THAI-DICTIONARY-TOKENIZERS&quot;]
+nthai_word_segmenters_measured[&quot;THAI-WORD-SEGMENTERS-MEASURED&quot;]
+nunihdsa[&quot;UNIHDSA&quot;]
+nyolo[&quot;YOLO&quot;]
+n1_1 --&gt; n1_2
+n1_1 --&gt; n1_3
+n1_1 --&gt; n1_4
+n1_3 --&gt; n1_4
+n1_1 --&gt; n1_5
+n1_2 --&gt; n2_1
+n1_5 --&gt; n2_1
+n2_1 --&gt; n2_2
+n1_3 --&gt; n2_3
+n1_4 --&gt; n2_3
+n2_1 --&gt; n2_3
+n2_1 --&gt; n2_4
+n2_2 --&gt; n2_4
+n2_3 --&gt; n2_4
+n2_4 --&gt; n3_1
+n3_1 --&gt; n3_2
+n1_2 --&gt; n3_3
+n3_1 --&gt; n3_3
+n1_2 --&gt; n3_4
+n3_3 --&gt; n3_4
+n1_4 --&gt; n3_5
+n3_2 --&gt; n3_5
+n3_3 --&gt; n3_5
+n3_4 --&gt; n3_6
+n1_1 --&gt; n3_7
+n1_3 --&gt; n3_7
+n3_4 --&gt; n3_7
+n1_4 --&gt; n4_1
+n2_2 --&gt; n4_1
+n3_3 --&gt; n4_1
+n4_1 --&gt; n4_2
+n1_4 --&gt; n4_3
+n1_5 --&gt; n4_3
+n4_1 --&gt; n4_3
+n1_5 --&gt; n4_4
+n3_4 --&gt; n4_4
+n4_1 --&gt; n4_4
+n4_3 --&gt; n4_4
+n4_4 --&gt; n5_1
+n3_4 --&gt; n5_2
+n3_6 --&gt; n5_2
+n3_4 --&gt; n5_3
+n3_7 --&gt; n5_3
+n4_4 --&gt; n5_3
+n1_1 --&gt; n5_4
+n1_4 --&gt; n5_4
+n2_4 --&gt; n5_4
+n3_5 --&gt; n5_4
+n4_1 --&gt; n6_1
+n4_3 --&gt; n6_1
+n4_4 --&gt; n6_1
+n1_5 --&gt; n6_2
+n4_1 --&gt; n6_2
+n4_3 --&gt; n6_2
+n6_1 --&gt; n6_2
+n4_1 --&gt; n6_3
+n4_2 --&gt; n6_3
+n6_1 --&gt; n6_3
+n2_2 --&gt; n6_4
+n4_1 --&gt; n6_4
+n4_3 --&gt; n6_4
+n1_5 --&gt; n6_5
+n3_4 --&gt; n6_5
+n4_3 --&gt; n6_5
+n4_2 --&gt; n6_6
+n6_1 --&gt; n6_6
+n3_4 --&gt; n6_7
+n4_2 --&gt; n6_7
+n3_7 --&gt; n6_8
+n4_3 --&gt; n6_8
+n6_1 --&gt; n6_9
+n6_2 --&gt; n6_9
+n6_3 --&gt; n6_9
+n6_4 --&gt; n6_9
+n6_5 --&gt; n6_9
+n6_6 --&gt; n6_9
+n6_7 --&gt; n6_9
+n6_8 --&gt; n6_9
+ndos_rag --&gt; nbookrag
+nlongdocbench --&gt; nbookrag
+nhichunk --&gt; ndoclens
+n4_3 --&gt; ndoclens
+nraptor --&gt; ndos_rag
+n4_4 --&gt; ndos_rag
+nstair --&gt; ndpr_nv_embed
+n4_1 --&gt; ndpr_nv_embed
+n4_2 --&gt; ndpr_nv_embed
+nsplade --&gt; ndsi
+ndpr_nv_embed --&gt; ndsi
+n3_5 --&gt; ndsi
+nbookrag --&gt; nhichunk
+nlongdocbench --&gt; nhichunk
+nstair --&gt; nlongdocbench
+nunihdsa --&gt; nlongdocbench
+nstair --&gt; nraptor
+n4_3 --&gt; nraptor
+n4_4 --&gt; nraptor
+nlongdocbench --&gt; nshed
+n5_1 --&gt; nshed
+ndpr_nv_embed --&gt; nsplade
+n1_5 --&gt; nsplade
+nbge_m3 --&gt; nsplade
+n1_5 --&gt; nstair
+n4_3 --&gt; nstair
+n4_4 --&gt; nstair
+nlongdocbench --&gt; nsteds
+nunihdsa --&gt; nsteds
+n1_1 --&gt; nbest_corpus
+n1_5 --&gt; nbge_m3
+n4_1 --&gt; nbge_m3
+n4_2 --&gt; nbge_m3
+n4_3 --&gt; nbge_m3
+n1_1 --&gt; nthai_word_segmenters_measured
+nbest_corpus --&gt; nthai_word_segmenters_measured
+n3_1 --&gt; nunihdsa
+class n1_1 draft
+class n1_2 draft
+class n1_3 draft
+class n1_4 draft
+class n1_5 draft
+class n2_1 draft
+class n2_2 draft
+class n2_3 draft
+class n2_4 draft
+class n3_1 draft
+class n3_2 draft
+class n3_3 draft
+class n3_4 draft
+class n3_5 draft
+class n3_6 draft
+class n3_7 draft
+class n4_1 draft
+class n4_2 draft
+class n4_3 draft
+class n4_4 draft
+class n5_1 draft
+class n5_2 draft
+class n5_3 draft
+class n5_4 draft
+class n6_1 draft
+class n6_2 draft
+class n6_3 draft
+class n6_4 draft
+class n6_5 draft
+class n6_6 draft
+class n6_7 draft
+class n6_8 draft
+class n6_9 draft
+class nbookrag draft
+class ndoclens draft
+class ndos_rag draft
+class ndpr_nv_embed draft
+class ndsi draft
+class nhichunk draft
+class nlongdocbench draft
+class nraptor draft
+class nshed draft
+class nsplade draft
+class nstair draft
+class nsteds draft
+class nbest_corpus draft
+class nbge_m3 published
+class nthai_dictionary_tokenizers draft
+class nthai_word_segmenters_measured draft
+class nunihdsa draft
+class nyolo draft</code></pre></div><aside id="graph-panel" class="graph-panel unit-box" hidden><p class="graph-panel-title"></p><p><strong>ต้องรู้ก่อน:</strong> <span class="graph-panel-prereqs"></span></p><button type="button" class="graph-reset">ล้างการไฮไลต์</button></aside><script type="application/json" id="graph-data">[{"id":"1.1","label":"1.1","title":"1.1 ภาษาไทยไม่เว้นวรรค ชวนรู้จักหนึ่งหน่วย","status":"draft","directPrereqs":[],"closure":[]},{"id":"1.2","label":"1.2","title":"1.2 โมเดลเลือกชิ้นคำอย่างไร","status":"draft","directPrereqs":["1.1"],"closure":["1.1"]},{"id":"1.3","label":"1.3","title":"1.3 ทายคำถัดไปจากการนับได้ไหม","status":"draft","directPrereqs":["1.1"],"closure":["1.1"]},{"id":"1.4","label":"1.4","title":"1.4 จัดหมวดข้อความด้วยการนับได้อย่างไร","status":"draft","directPrereqs":["1.1","1.3"],"closure":["1.3","1.1"]},{"id":"1.5","label":"1.5","title":"1.5 ค้นจากคำทำงานอย่างไร","status":"draft","directPrereqs":["1.1"],"closure":["1.1"]},{"id":"2.1","label":"2.1","title":"2.1 ข้อความกลายเป็นตัวเลขได้อย่างไร","status":"draft","directPrereqs":["1.2","1.5"],"closure":["1.5","1.1","1.2"]},{"id":"2.2","label":"2.2","title":"2.2 ใกล้กันแปลว่าอะไร","status":"draft","directPrereqs":["2.1"],"closure":["2.1","1.5","1.1","1.2"]},{"id":"2.3","label":"2.3","title":"2.3 โมเดลเรียนจากความผิดพลาดได้อย่างไร","status":"draft","directPrereqs":["1.3","1.4","2.1"],"closure":["2.1","1.5","1.1","1.2","1.4","1.3"]},{"id":"2.4","label":"2.4","title":"2.4 อ่านทีละคำแล้วจำอย่างไร และ attention มาช่วยตรงไหน","status":"draft","directPrereqs":["2.1","2.2","2.3"],"closure":["2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.1","label":"3.1","title":"3.1 attention มองไปที่คำไหน","status":"draft","directPrereqs":["2.4"],"closure":["2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.2","label":"3.2","title":"3.2 น้ำหนักร้อยล้านตัวอยู่ตรงไหน","status":"draft","directPrereqs":["3.1"],"closure":["3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.3","label":"3.3","title":"3.3 BERT กับ GPT ฝึกต่างกันตรงไหน","status":"draft","directPrereqs":["1.2","3.1"],"closure":["3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.4","label":"3.4","title":"3.4 โมเดลเลือกคำตอบออกมาอย่างไร","status":"draft","directPrereqs":["1.2","3.3"],"closure":["3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.5","label":"3.5","title":"3.5 ปรับโมเดลให้ทำงานของเราด้วยข้อมูลน้อย ๆ ได้อย่างไร","status":"draft","directPrereqs":["1.4","3.2","3.3"],"closure":["3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.2"]},{"id":"3.6","label":"3.6","title":"3.6 จากโมเดลทายคำกลายเป็นผู้ช่วยได้อย่างไร","status":"draft","directPrereqs":["3.4"],"closure":["3.4","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"3.7","label":"3.7","title":"3.7 วัดข้อความที่โมเดลเขียนอย่างไร","status":"draft","directPrereqs":["1.1","1.3","3.4"],"closure":["3.4","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"4.1","label":"4.1","title":"4.1 เวกเตอร์ของประโยคมาจากไหน","status":"draft","directPrereqs":["1.4","2.2","3.3"],"closure":["3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"4.2","label":"4.2","title":"4.2 สอนเวกเตอร์ให้จับคู่ถูกได้อย่างไร","status":"draft","directPrereqs":["4.1"],"closure":["4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"4.3","label":"4.3","title":"4.3 metric แต่ละตัวมองไม่เห็นอะไร","status":"draft","directPrereqs":["1.4","1.5","4.1"],"closure":["4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"4.4","label":"4.4","title":"4.4 ให้ LLM ตอบจากเอกสารของเราได้อย่างไร","status":"draft","directPrereqs":["1.5","3.4","4.1","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"5.1","label":"5.1","title":"5.1 ให้โมเดลลงมือทำหลายขั้นได้อย่างไร","status":"draft","directPrereqs":["4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"5.2","label":"5.2","title":"5.2 ให้โมเดลคิดนานขึ้นช่วยได้จริงไหม","status":"draft","directPrereqs":["3.4","3.6"],"closure":["3.6","3.4","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"5.3","label":"5.3","title":"5.3 ระบบภาษาพังตรงไหน และใครได้รับผลกระทบ","status":"draft","directPrereqs":["3.4","3.7","4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","3.7"]},{"id":"5.4","label":"5.4","title":"5.4 หาชื่อคนและสถานที่ในข้อความไทยได้อย่างไร","status":"draft","directPrereqs":["1.1","1.4","2.4","3.5"],"closure":["3.5","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.2"]},{"id":"6.1","label":"6.1","title":"6.1 อ่านคำถามคู่กับเอกสารพร้อมกันทำไมเรียงได้แม่นกว่า","status":"draft","directPrereqs":["4.1","4.3","4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"6.2","label":"6.2","title":"6.2 สองระบบจัดอันดับไม่ตรงกัน จะเชื่อใคร","status":"draft","directPrereqs":["1.5","4.1","4.3","6.1"],"closure":["6.1","4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"6.3","label":"6.3","title":"6.3 บีบเอกสารเหลือเวกเตอร์เดียวแล้วเสียอะไรไป","status":"draft","directPrereqs":["4.1","4.2","6.1"],"closure":["6.1","4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","4.2"]},{"id":"6.4","label":"6.4","title":"6.4 ค้นล้านเวกเตอร์โดยไม่เทียบทุกตัวได้อย่างไร","status":"draft","directPrereqs":["2.2","4.1","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"6.5","label":"6.5","title":"6.5 คำไม่อยู่ในเอกสาร จะแก้ที่คำถาม ที่เอกสาร หรือที่น้ำหนักคำ","status":"draft","directPrereqs":["1.5","3.4","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"6.6","label":"6.6","title":"6.6 bi-encoder ที่เร็วเรียนจาก reranker ที่ช้าได้ไหม","status":"draft","directPrereqs":["4.2","6.1"],"closure":["6.1","4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","4.2"]},{"id":"6.7","label":"6.7","title":"6.7 ไม่มีคู่ที่ติดป้าย แล้วคู่ฝึกมาจากไหน","status":"draft","directPrereqs":["3.4","4.2"],"closure":["4.2","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"6.8","label":"6.8","title":"6.8 \"คำตอบที่ถูก\" ใน benchmark มาจากไหน และ LLM ตัดสินแทนได้ไหม","status":"draft","directPrereqs":["3.7","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.7","3.4"]},{"id":"6.9","label":"6.9","title":"6.9 อ่าน related work ของ paper retrieval ให้ออก","status":"draft","directPrereqs":["6.1","6.2","6.3","6.4","6.5","6.6","6.7","6.8"],"closure":["6.8","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.7","3.4","6.7","4.2","6.6","6.1","4.4","6.5","6.4","6.3","6.2"]},{"id":"bookrag","label":"BOOKRAG","title":"BookRAG: 43.8 กับ 16.5 แต่ส่วนต่างมาจาก tree จริงไหม","status":"draft","directPrereqs":["dos-rag","longdocbench"],"closure":["longdocbench","unihdsa","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","stair","4.4","4.3","4.1","3.3","3.4","dos-rag","raptor"]},{"id":"doclens","label":"DOCLENS","title":"DocLens: ถ้าให้ LLM อ่านทุกหน้าได้ ยังต้องมี retrieval อยู่ไหม","status":"draft","directPrereqs":["hichunk","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","hichunk","longdocbench","unihdsa","stair","4.4","3.4","bookrag","dos-rag","raptor"]},{"id":"dos-rag","label":"DOS-RAG","title":"DOS RAG: ก่อนสร้าง tree ลองเรียง chunk ให้ถูกลำดับก่อน","status":"draft","directPrereqs":["raptor","4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","raptor","stair"]},{"id":"dpr-nv-embed","label":"DPR-NV-EMBED","title":"DPR ถึง NV-Embed-v2: dense retrieval ที่ STAIR เทียบด้วย และสิ่งที่ยังไม่ได้เทียบ","status":"draft","directPrereqs":["stair","4.1","4.2"],"closure":["4.2","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","stair","4.4","4.3","3.4"]},{"id":"dsi","label":"DSI","title":"DSI: เก็บ index ไว้ในน้ำหนักของโมเดล แล้วเพิ่มบทใหม่ได้ไหม","status":"draft","directPrereqs":["splade","dpr-nv-embed","3.5"],"closure":["3.5","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.2","dpr-nv-embed","4.2","4.1","stair","4.4","4.3","3.4","splade","bge-m3"]},{"id":"hichunk","label":"HICHUNK","title":"HiChunk: chunk ตามโครงสร้างช่วยเมื่อไหร่ และเมื่อไหร่ไม่ต่าง","status":"draft","directPrereqs":["bookrag","longdocbench"],"closure":["longdocbench","unihdsa","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","stair","4.4","4.3","4.1","3.3","3.4","bookrag","dos-rag","raptor"]},{"id":"longdocbench","label":"LONGDOCBENCH","title":"LongDocBench: parser อ่านทุกหน้าได้ แต่สารบัญทั้งเล่มยังแบน","status":"draft","directPrereqs":["stair","unihdsa"],"closure":["unihdsa","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","stair","4.4","4.3","4.1","3.3","3.4"]},{"id":"raptor","label":"RAPTOR","title":"RAPTOR: tree ที่ได้จากการ cluster แล้วสรุป ชนะเพราะ tree หรือเพราะ retriever","status":"draft","directPrereqs":["stair","4.3","4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","stair"]},{"id":"shed","label":"SHED","title":"SHED: สร้างสารบัญที่ไม่ทำเนื้อหาหล่นหาย ให้ agent อ่านทีละส่วน","status":"draft","directPrereqs":["longdocbench","5.1"],"closure":["5.1","4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4","longdocbench","unihdsa","stair"]},{"id":"splade","label":"SPLADE","title":"SPLADE: BM25 ที่เรียนรู้ได้ และภาษาที่มันมองไม่เห็น","status":"draft","directPrereqs":["dpr-nv-embed","1.5","bge-m3"],"closure":["bge-m3","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","4.2","dpr-nv-embed","stair","4.4","3.4"]},{"id":"stair","label":"STAIR","title":"STAIR: ให้ LLM เปิดสารบัญก่อนค้นหนังสือ","status":"draft","directPrereqs":["1.5","4.3","4.4"],"closure":["4.4","4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","3.4"]},{"id":"steds","label":"STEDS","title":"STEDS กับ TEDS: คะแนนสารบัญที่ต่างกันแค่ค่า rename","status":"draft","directPrereqs":["longdocbench","unihdsa"],"closure":["unihdsa","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","longdocbench","stair","4.4","4.3","4.1","3.3","3.4"]},{"id":"best-corpus","label":"BEST-CORPUS","title":"BEST corpus: มาตรฐานตัดคำไทยที่ใช้อ้างอิงทั้งวงการ","status":"draft","directPrereqs":["1.1"],"closure":["1.1"]},{"id":"bge-m3","label":"BGE-M3","title":"BGE-M3: หนึ่ง encoder สาม retrieval head","href":"/blog/2026/september/bge-m3/","status":"published","directPrereqs":["1.5","4.1","4.2","4.3"],"closure":["4.3","4.1","3.3","3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2","4.2"]},{"id":"thai-dictionary-tokenizers","label":"THAI-DICTIONARY-TOKENIZERS","title":"newmm, longest, mm: สามวิธีตัดคำแบบพจนานุกรมต่างกันตรงไหน","status":"draft","directPrereqs":[],"closure":[]},{"id":"thai-word-segmenters-measured","label":"THAI-WORD-SEGMENTERS-MEASURED","title":"วัดจริง: newmm, AttaCut, deepcut, sefr_cut และ ICU แม่นแค่ไหนบน BEST","status":"draft","directPrereqs":["1.1","best-corpus"],"closure":["best-corpus","1.1"]},{"id":"unihdsa","label":"UNIHDSA","title":"UniHDSA: มอง sub-task ของ document structure analysis ทุกอย่างเป็น relation prediction","status":"draft","directPrereqs":["3.1"],"closure":["3.1","2.4","2.3","2.1","1.5","1.1","1.2","1.4","1.3","2.2"]},{"id":"yolo","label":"YOLO","title":"อ่าน YOLO ทีละเวอร์ชัน: จาก grid 7×7 ถึง NMS-free","status":"draft","directPrereqs":[],"closure":[]}]</script></main><footer class="site-footer">© 2026 Panthakan Boonsuriyatham</footer></body></html><script type="module" src="/blog/_astro/index.astro_astro_type_script_index_0_lang.CCo7w5oH.js"></script>

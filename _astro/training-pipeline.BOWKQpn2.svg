@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 296" width="640" height="296" role="img" aria-label="Three training stages: RetroMAE pre-training of XLM-RoBERTa-large with 8192 positions, then unsupervised contrastive training of the dense head on 1.2B pairs, then fine-tuning of all three heads with self-knowledge distillation on labelled and synthetic data">
+<style>
+.ink{fill:#2A3140}.mut{fill:#6B7484}.ln{stroke:#8A93A3;fill:none;stroke-width:1.2}.lnf{fill:#8A93A3}.bx{fill:#FFFFFF;stroke:#8A93A3;stroke-width:1.2}
+.dn{stroke:#2F6FB0;stroke-width:1.4}.dnf{fill:#2F6FB0}.dnt{fill:#2F6FB0;fill-opacity:.13}
+.sp{stroke:#B7791F;stroke-width:1.4}.spf{fill:#B7791F}.spt{fill:#B7791F;fill-opacity:.13}
+.mv{stroke:#22876A;stroke-width:1.4}.mvf{fill:#22876A}.mvt{fill:#22876A;fill-opacity:.13}
+.tc{stroke:#7A4E9C;stroke-width:1.4}.tcf{fill:#7A4E9C}.tct{fill:#7A4E9C;fill-opacity:.13}
+text{font-family:'Noto Sans Thai Variable','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:12px}
+.b{font-weight:600}.s{font-size:11px}.xs{font-size:10px}
+.m,.ms{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-style:italic}.m{font-size:13.5px}.ms{font-size:12px}
+.mi,.mn{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-size:1.06em}.mi{font-style:italic}.mn{font-style:normal}
+.up{font-style:normal}.sb{font-size:.72em}.bb{font-style:normal;font-weight:700}.nb{font-weight:400}
+.tag{font-size:9.5px;letter-spacing:.09em}.xxs{font-size:9.4px}
+@media (prefers-color-scheme: dark){.ink{fill:#E6E9EF}.mut{fill:#9AA3B2}.ln{stroke:#7C8797}.lnf{fill:#7C8797}.bx{fill:#1C212B;stroke:#7C8797}.dn{stroke:#6FA6E0}.dnf{fill:#6FA6E0}.sp{stroke:#E0A94A}.spf{fill:#E0A94A}.mv{stroke:#58BF9C}.mvf{fill:#58BF9C}.tc{stroke:#B48BD6}.tcf{fill:#B48BD6}}
+</style>
+<defs><marker id="tp-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="lnf"/></marker></defs>
+<text x="320" y="16" text-anchor="middle" class="mut">multi-stage training (Fig. 2, &#167;3.3, App. B.1, Table 8)</text>
+<rect x="20" y="28" width="180" height="146" rx="3" class="bx"/>
+<text x="110" y="48" text-anchor="middle" class="mut tag b">STAGE 1</text>
+<text x="110" y="67" text-anchor="middle" class="ink b">RetroMAE pre-training</text>
+<text x="110" y="88" text-anchor="middle" class="ink s">XLM-RoBERTa-large</text>
+<text x="110" y="104" text-anchor="middle" class="mut s">positions 512 &#8594; 8192</text>
+<rect x="42" y="112" width="136" height="19" rx="9.5" class="bx"/><text x="110" y="125" text-anchor="middle" class="mut xs">encoder only, no heads</text>
+<text x="110" y="149" text-anchor="middle" class="mut xxs">Pile &#183; Wudao &#183; mC4</text>
+<text x="110" y="164" text-anchor="middle" class="mut xxs">184M texts &#183; 105 languages</text>
+<line x1="200" y1="101" x2="228" y2="101" class="ln" marker-end="url(#tp-a)"/>
+<rect x="230" y="28" width="180" height="146" rx="3" class="bx"/>
+<text x="320" y="48" text-anchor="middle" class="mut tag b">STAGE 2</text>
+<text x="320" y="67" text-anchor="middle" class="ink b">Unsupervised contrastive</text>
+<text x="320" y="88" text-anchor="middle" class="ink s">1.2B text pairs</text>
+<text x="320" y="104" text-anchor="middle" class="mut s">194 languages</text>
+<rect x="272" y="112" width="96" height="19" rx="9.5" class="dnt dn"/><text x="320" y="125" text-anchor="middle" class="ink xs">dense head only</text>
+<text x="320" y="149" text-anchor="middle" class="mut xxs">Wikipedia &#183; S2ORC &#183; xP3 &#183; mC4</text>
+<text x="320" y="164" text-anchor="middle" class="mut xxs">CC-News &#183; MTP &#183; NLLB &#183; CCMatrix</text>
+<line x1="410" y1="101" x2="438" y2="101" class="ln" marker-end="url(#tp-a)"/>
+<rect x="440" y="28" width="180" height="146" rx="3" class="bx"/>
+<text x="530" y="48" text-anchor="middle" class="mut tag b">STAGE 3</text>
+<text x="530" y="67" text-anchor="middle" class="ink b">Fine-tuning + self-KD</text>
+<text x="530" y="88" text-anchor="middle" class="ink s">labelled 1.6M pairs</text>
+<text x="530" y="104" text-anchor="middle" class="mut xxs">EN 1.1M &#183; ZH 386.6K &#183; other 88.9K</text>
+<rect x="452" y="112" width="50" height="19" rx="9.5" class="dnt dn"/><text x="477" y="125" text-anchor="middle" class="ink xs">dense</text>
+<rect x="506" y="112" width="50" height="19" rx="9.5" class="spt sp"/><text x="531" y="125" text-anchor="middle" class="ink xs">sparse</text>
+<rect x="560" y="112" width="50" height="19" rx="9.5" class="mvt mv"/><text x="585" y="125" text-anchor="middle" class="ink xs">multi</text>
+<text x="530" y="149" text-anchor="middle" class="mut xxs">+ MultiLongDoc 41.4K (GPT-3.5)</text>
+<text x="530" y="164" text-anchor="middle" class="mut xxs">7 hard negatives (ANCE)</text>
+<text x="110" y="192" text-anchor="middle" class="mut xs">32 &#215; A100 40GB &#183; 20k steps</text>
+<text x="320" y="192" text-anchor="middle" class="mut xs">96 &#215; A800 80GB &#183; 25k steps</text>
+<text x="530" y="192" text-anchor="middle" class="mut xs">24 &#215; A800 80GB</text>
+<text x="110" y="209" text-anchor="middle" class="mut xs">weights init &#8594;</text>
+<text x="320" y="209" text-anchor="middle" class="mut xs">shared encoder init &#8594;</text>
+<text x="530" y="209" text-anchor="middle" class="mut xs">released as BAAI/bge-m3</text>
+<line x1="20" y1="224" x2="620" y2="224" class="ln" stroke-dasharray="3 3"/>
+<text x="320" y="246" text-anchor="middle" class="ink s">Table 6 &#183; MIRACL dev nDCG@10, Dense head</text>
+<text x="320" y="269" text-anchor="middle" class="ink">stage 3 only  60.5   &#8594;   stages 1 + 3  66.1   &#8594;   stages 1 + 2 + 3  69.2</text>
+<text x="320" y="288" text-anchor="middle" class="mut xs">each earlier stage adds to the final retrieval quality</text>
+</svg>

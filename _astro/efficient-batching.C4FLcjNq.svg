@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="Efficient batching: data grouped by length, mini-batches sampled within one group, split into sub-batches encoded with gradient checkpointing keeping only embeddings, then embeddings broadcast across GPUs for in-batch negatives">
+<style>
+.ink{fill:#2A3140}.mut{fill:#6B7484}.ln{stroke:#8A93A3;fill:none;stroke-width:1.2}.lnf{fill:#8A93A3}.bx{fill:#FFFFFF;stroke:#8A93A3;stroke-width:1.2}
+.dn{stroke:#2F6FB0;stroke-width:1.4}.dnf{fill:#2F6FB0}.dnt{fill:#2F6FB0;fill-opacity:.13}
+.sp{stroke:#B7791F;stroke-width:1.4}.spf{fill:#B7791F}.spt{fill:#B7791F;fill-opacity:.13}
+.mv{stroke:#22876A;stroke-width:1.4}.mvf{fill:#22876A}.mvt{fill:#22876A;fill-opacity:.13}
+.tc{stroke:#7A4E9C;stroke-width:1.4}.tcf{fill:#7A4E9C}.tct{fill:#7A4E9C;fill-opacity:.13}
+text{font-family:'Noto Sans Thai Variable','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:12px}
+.b{font-weight:600}.s{font-size:11px}.xs{font-size:10px}
+.m,.ms{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-style:italic}.m{font-size:13.5px}.ms{font-size:12px}
+.mi,.mn{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-size:1.06em}.mi{font-style:italic}.mn{font-style:normal}
+.up{font-style:normal}.sb{font-size:.72em}.bb{font-style:normal;font-weight:700}.nb{font-weight:400}
+@media (prefers-color-scheme: dark){.ink{fill:#E6E9EF}.mut{fill:#9AA3B2}.ln{stroke:#7C8797}.lnf{fill:#7C8797}.bx{fill:#1C212B;stroke:#7C8797}.dn{stroke:#6FA6E0}.dnf{fill:#6FA6E0}.sp{stroke:#E0A94A}.spf{fill:#E0A94A}.mv{stroke:#58BF9C}.mvf{fill:#58BF9C}.tc{stroke:#B48BD6}.tcf{fill:#B48BD6}}
+</style>
+<defs><marker id="eb-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="lnf"/></marker></defs>
+<text x="320" y="16" text-anchor="middle" class="mut">efficient batching (&#167;3.4, Fig. 3, App. B.3, Tables 9&#8211;10)</text>
+<text x="90" y="40" text-anchor="middle" class="ink b">1 &#183; group by length</text>
+<rect x="20" y="52" width="30" height="14" class="bx dnt"/><text x="56" y="63" class="mut xs">0&#8211;500</text>
+<rect x="20" y="72" width="60" height="14" class="bx dnt"/><text x="86" y="83" class="mut xs">1000&#8211;2000</text>
+<rect x="20" y="92" width="90" height="14" class="bx dnt"/><text x="116" y="103" class="mut xs">4000&#8211;5000</text>
+<rect x="20" y="112" width="120" height="14" class="bx dnt"/><text x="146" y="123" class="mut xs">7000&#8211;8192</text>
+<text x="90" y="150" text-anchor="middle" class="mut xs">mini-batch size per range (Table 9)</text>
+<text x="90" y="164" text-anchor="middle" class="mut xs">67,200 (short) &#8594; 9,984 (long)</text>
+<line x1="176" y1="90" x2="204" y2="90" class="ln" marker-end="url(#eb-a)"/>
+<text x="290" y="40" text-anchor="middle" class="ink b">2 &#183; one group per mini-batch</text>
+<rect x="210" y="52" width="160" height="12" class="bx"/><rect x="210" y="68" width="160" height="12" class="bx"/>
+<rect x="210" y="84" width="160" height="12" class="bx"/><rect x="210" y="100" width="160" height="12" class="bx"/>
+<text x="290" y="128" text-anchor="middle" class="mut xs">similar lengths &#8594; almost no padding</text>
+<text x="290" y="142" text-anchor="middle" class="mut xs">fixed seed on every GPU &#8594; same load</text>
+<line x1="376" y1="90" x2="404" y2="90" class="ln" marker-end="url(#eb-a)"/>
+<text x="520" y="40" text-anchor="middle" class="ink b">3 &#183; split-batch</text>
+<rect x="418" y="52" width="62" height="26" rx="3" class="bx"/><text x="449" y="69" text-anchor="middle" class="ink xs">sub-batch</text>
+<rect x="418" y="86" width="62" height="26" rx="3" class="bx"/><text x="449" y="103" text-anchor="middle" class="ink xs">sub-batch</text>
+<rect x="418" y="120" width="62" height="26" rx="3" class="bx"/><text x="449" y="137" text-anchor="middle" class="ink xs">sub-batch</text>
+<line x1="482" y1="65" x2="496" y2="92" class="ln" marker-end="url(#eb-a)"/>
+<line x1="482" y1="99" x2="496" y2="99" class="ln" marker-end="url(#eb-a)"/>
+<line x1="482" y1="133" x2="496" y2="106" class="ln" marker-end="url(#eb-a)"/>
+<rect x="500" y="80" width="120" height="40" rx="3" class="bx"/>
+<text x="560" y="97" text-anchor="middle" class="ink xs">encoder forward</text>
+<text x="560" y="112" text-anchor="middle" class="mut xs">grad. checkpointing</text>
+<text x="520" y="162" text-anchor="middle" class="mut xs">keep only the embeddings,</text>
+<text x="520" y="176" text-anchor="middle" class="mut xs">drop activations; concatenate</text>
+<line x1="20" y1="192" x2="620" y2="192" class="ln" stroke-dasharray="3 3"/>
+<text x="110" y="214" text-anchor="middle" class="ink b">4 &#183; broadcast across GPUs</text>
+<rect x="40" y="228" width="40" height="24" rx="3" class="bx"/><text x="60" y="244" text-anchor="middle" class="ink xs">GPU 0</text>
+<rect x="90" y="228" width="40" height="24" rx="3" class="bx"/><text x="110" y="244" text-anchor="middle" class="ink xs">GPU 1</text>
+<rect x="140" y="228" width="40" height="24" rx="3" class="bx"/><text x="160" y="244" text-anchor="middle" class="ink xs">GPU k</text>
+<line x1="80" y1="240" x2="90" y2="240" class="ln" marker-end="url(#eb-a)" marker-start="url(#eb-a)"/>
+<line x1="130" y1="240" x2="140" y2="240" class="ln" marker-end="url(#eb-a)" marker-start="url(#eb-a)"/>
+<text x="110" y="270" text-anchor="middle" class="mut xs">every device sees all embeddings &#8594;</text>
+<text x="110" y="284" text-anchor="middle" class="mut xs">in-batch negatives from the whole cluster</text>
+<rect x="250" y="212" width="370" height="76" rx="3" class="bx tct tc"/>
+<text x="435" y="234" text-anchor="middle" class="ink b">Table 10 &#183; max batch size per device</text>
+<text x="435" y="253" text-anchor="middle" class="mut s">without split-batch &#8594; with split-batch</text>
+<text x="435" y="275" text-anchor="middle" class="ink">len 1024: 262 &#8594; 855   &#183;   len 4096: 25 &#8594; 258   &#183;   len 8192: 6 &#8594; 130</text>
+</svg>

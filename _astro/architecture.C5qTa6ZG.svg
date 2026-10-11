@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="BGE-M3 architecture: one XLM-RoBERTa-large encoder feeds three heads: dense from H[0], sparse weights per token, multi-vector per token; scores combined into s_rank">
+<style>
+.ink{fill:#2A3140}.mut{fill:#6B7484}.ln{stroke:#8A93A3;fill:none;stroke-width:1.2}.lnf{fill:#8A93A3}.bx{fill:#FFFFFF;stroke:#8A93A3;stroke-width:1.2}
+.dn{stroke:#2F6FB0;stroke-width:1.4}.dnf{fill:#2F6FB0}.dnt{fill:#2F6FB0;fill-opacity:.13}
+.sp{stroke:#B7791F;stroke-width:1.4}.spf{fill:#B7791F}.spt{fill:#B7791F;fill-opacity:.13}
+.mv{stroke:#22876A;stroke-width:1.4}.mvf{fill:#22876A}.mvt{fill:#22876A;fill-opacity:.13}
+.tc{stroke:#7A4E9C;stroke-width:1.4}.tcf{fill:#7A4E9C}.tct{fill:#7A4E9C;fill-opacity:.13}
+text{font-family:'Noto Sans Thai Variable','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:12px}
+.b{font-weight:600}.s{font-size:11px}.xs{font-size:10px}
+.m,.ms{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-style:italic}.m{font-size:13.5px}.ms{font-size:12px}
+.mi,.mn{font-family:"Latin Modern Roman","LM Roman 10","TeX Gyre Termes","STIX Two Text","Nimbus Roman","Liberation Serif","Times New Roman",Times,serif;font-size:1.06em}.mi{font-style:italic}.mn{font-style:normal}
+.up{font-style:normal}.sb{font-size:.72em}.bb{font-style:normal;font-weight:700}.nb{font-weight:400}
+@media (prefers-color-scheme: dark){.ink{fill:#E6E9EF}.mut{fill:#9AA3B2}.ln{stroke:#7C8797}.lnf{fill:#7C8797}.bx{fill:#1C212B;stroke:#7C8797}.dn{stroke:#6FA6E0}.dnf{fill:#6FA6E0}.sp{stroke:#E0A94A}.spf{fill:#E0A94A}.mv{stroke:#58BF9C}.mvf{fill:#58BF9C}.tc{stroke:#B48BD6}.tcf{fill:#B48BD6}}
+</style>
+<defs><marker id="arch-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="lnf"/></marker></defs>
+<text x="320" y="16" text-anchor="middle" class="mut">input tokens of one text (query or passage), up to 8192</text>
+<rect x="180" y="26" width="52" height="24" class="bx"/><text x="206" y="42" text-anchor="middle" class="ink s">[CLS]</text>
+<rect x="240" y="26" width="40" height="24" class="bx"/><text x="260" y="42" text-anchor="middle" class="ink m">t<tspan class="sb" dy="3">1</tspan></text>
+<rect x="288" y="26" width="40" height="24" class="bx"/><text x="308" y="42" text-anchor="middle" class="ink m">t<tspan class="sb" dy="3">2</tspan></text>
+<rect x="336" y="26" width="40" height="24" class="bx"/><text x="356" y="42" text-anchor="middle" class="ink m">t<tspan class="sb" dy="3">3</tspan></text>
+<text x="392" y="43" text-anchor="middle" class="ink">&#8230;</text>
+<rect x="408" y="26" width="40" height="24" class="bx"/><text x="428" y="42" text-anchor="middle" class="ink m">t<tspan class="sb" dy="3">N</tspan></text>
+<line x1="320" y1="52" x2="320" y2="70" class="ln" marker-end="url(#arch-a)"/>
+<rect x="140" y="72" width="360" height="52" rx="3" class="bx"/>
+<text x="320" y="94" text-anchor="middle" class="ink b">XLM-RoBERTa-large encoder (RetroMAE-adapted)</text>
+<text x="320" y="112" text-anchor="middle" class="mut">24 layers &#183; <tspan class="mi">d</tspan><tspan class="mn"> = 1024</tspan> &#183; positions extended to 8192</text>
+<line x1="320" y1="124" x2="320" y2="144" class="ln" marker-end="url(#arch-a)"/>
+<rect x="180" y="148" width="52" height="24" class="bx dn dnt"/><text x="206" y="164" text-anchor="middle" class="ink m">H<tspan class="up">[0]</tspan></text>
+<rect x="240" y="148" width="40" height="24" class="bx"/><text x="260" y="164" text-anchor="middle" class="ink m">H<tspan class="up">[1]</tspan></text>
+<rect x="288" y="148" width="40" height="24" class="bx"/><text x="308" y="164" text-anchor="middle" class="ink m">H<tspan class="up">[2]</tspan></text>
+<rect x="336" y="148" width="40" height="24" class="bx"/><text x="356" y="164" text-anchor="middle" class="ink m">H<tspan class="up">[3]</tspan></text>
+<text x="392" y="165" text-anchor="middle" class="ink">&#8230;</text>
+<rect x="408" y="148" width="40" height="24" class="bx"/><text x="428" y="164" text-anchor="middle" class="ink m">H<tspan class="up">[</tspan>N<tspan class="up">]</tspan></text>
+<text x="460" y="165" class="mut m">H <tspan class="up">&#8712;</tspan> <tspan class="bb">R</tspan><tspan class="sb" dy="-5">(N+1)&#215;d</tspan></text>
+<path d="M206,172 L206,186 L115,186 L115,206" class="ln dn" marker-end="url(#arch-a)"/>
+<text x="150" y="200" text-anchor="middle" class="mut s">[CLS] only</text>
+<path d="M344,172 L344,186 L320,186 L320,206" class="ln sp" marker-end="url(#arch-a)"/>
+<text x="350" y="200" class="mut s">every token</text>
+<path d="M428,172 L428,186 L525,186 L525,206" class="ln mv" marker-end="url(#arch-a)"/>
+<text x="480" y="200" text-anchor="middle" class="mut s">all tokens</text>
+<rect x="20" y="208" width="190" height="44" rx="3" class="bx dn dnt"/>
+<text x="115" y="226" text-anchor="middle" class="ink b">Dense head</text>
+<text x="115" y="244" text-anchor="middle" class="ink ms">e<tspan class="up"> = norm(</tspan>H<tspan class="up">[0])</tspan></text>
+<rect x="225" y="208" width="190" height="44" rx="3" class="bx sp spt"/>
+<text x="320" y="226" text-anchor="middle" class="ink b">Sparse (lexical) head</text>
+<text x="320" y="244" text-anchor="middle" class="ink ms">w<tspan class="sb" dy="3">t</tspan><tspan class="up" dy="-3"> = ReLU(</tspan>W<tspan class="sb" dy="3">lex</tspan><tspan class="sb up" dy="-8">T</tspan><tspan dy="5"> H</tspan><tspan class="up">[</tspan>i<tspan class="up">])</tspan></text>
+<rect x="430" y="208" width="190" height="44" rx="3" class="bx mv mvt"/>
+<text x="525" y="226" text-anchor="middle" class="ink b">Multi-vector head</text>
+<text x="525" y="244" text-anchor="middle" class="ink ms">E<tspan class="up"> = norm(</tspan>W<tspan class="sb" dy="3">mul</tspan><tspan class="sb up" dy="-8">T</tspan><tspan dy="5"> H</tspan><tspan class="up">)</tspan></text>
+<line x1="115" y1="252" x2="115" y2="268" class="ln" marker-end="url(#arch-a)"/>
+<line x1="320" y1="252" x2="320" y2="268" class="ln" marker-end="url(#arch-a)"/>
+<line x1="525" y1="252" x2="525" y2="268" class="ln" marker-end="url(#arch-a)"/>
+<rect x="20" y="270" width="190" height="40" rx="3" class="bx"/>
+<text x="115" y="287" text-anchor="middle" class="ink s">one vector, 1024-d</text>
+<text x="115" y="303" text-anchor="middle" class="mut xs">no extra parameters &#8212; pooling only</text>
+<rect x="225" y="270" width="190" height="40" rx="3" class="bx"/>
+<text x="320" y="287" text-anchor="middle" class="ink s">one weight &#8805; 0 per token</text>
+<text x="320" y="303" text-anchor="middle" class="mut xs"><tspan class="mi">W</tspan><tspan class="mi sb" dy="2">lex</tspan><tspan dy="-2"> &#8712; </tspan><tspan class="bb">R</tspan><tspan class="mi sb" dy="-4">d&#215;1</tspan><tspan dy="4">, repeated token &#8594; max</tspan></text>
+<rect x="430" y="270" width="190" height="40" rx="3" class="bx"/>
+<text x="525" y="287" text-anchor="middle" class="ink s"><tspan class="mi">N</tspan> vectors, 1024-d each</text>
+<text x="525" y="303" text-anchor="middle" class="mut xs"><tspan class="mi">W</tspan><tspan class="mi sb" dy="2">mul</tspan><tspan dy="-2"> &#8712; </tspan><tspan class="bb">R</tspan><tspan class="mi sb" dy="-4">d&#215;d</tspan><tspan dy="4">, ColBERT-style</tspan></text>
+<line x1="115" y1="310" x2="115" y2="326" class="ln" marker-end="url(#arch-a)"/>
+<line x1="320" y1="310" x2="320" y2="326" class="ln" marker-end="url(#arch-a)"/>
+<line x1="525" y1="310" x2="525" y2="326" class="ln" marker-end="url(#arch-a)"/>
+<rect x="20" y="328" width="190" height="40" rx="3" class="bx dn"/>
+<text x="115" y="353" text-anchor="middle" class="ink ms">s<tspan class="sb" dy="3">dense</tspan><tspan class="up" dy="-3"> = &#10216;</tspan>e<tspan class="sb" dy="3">q</tspan><tspan class="up" dy="-3">, </tspan>e<tspan class="sb" dy="3">p</tspan><tspan class="up" dy="-3">&#10217;</tspan></text>
+<rect x="225" y="328" width="190" height="40" rx="3" class="bx sp"/>
+<text x="320" y="353" text-anchor="middle" class="ink ms">s<tspan class="sb" dy="3">lex</tspan><tspan class="up" dy="-3"> = &#931;</tspan><tspan class="sb" dy="3">t&#8712;q&#8745;p</tspan><tspan dy="-3"> w</tspan><tspan class="sb" dy="3">qt</tspan><tspan class="up" dy="-3">&#183;</tspan>w<tspan class="sb" dy="3">pt</tspan></text>
+<rect x="430" y="328" width="190" height="40" rx="3" class="bx mv"/>
+<text x="525" y="353" text-anchor="middle" class="ink ms">s<tspan class="sb" dy="3">mul</tspan><tspan class="up" dy="-3"> = </tspan><tspan class="up">1/</tspan>N<tspan class="up"> &#931;</tspan><tspan class="sb" dy="3">i</tspan><tspan class="up" dy="-3"> max</tspan><tspan class="sb" dy="3">j</tspan><tspan dy="-3"> E</tspan><tspan class="sb" dy="3">q</tspan><tspan class="up" dy="-3">[</tspan>i<tspan class="up">]&#183;</tspan>E<tspan class="sb" dy="3">p</tspan><tspan class="up" dy="-3">[</tspan>j<tspan class="up">]</tspan></text>
+<path d="M115,368 L115,384 L525,384 L525,368" class="ln"/>
+<line x1="320" y1="384" x2="320" y2="392" class="ln" marker-end="url(#arch-a)"/>
+<text x="320" y="412" text-anchor="middle" class="ink m b">s<tspan class="sb" dy="3">rank</tspan><tspan class="up" dy="-3"> = </tspan>w<tspan class="sb up" dy="3">1</tspan><tspan class="up" dy="-3">&#183;</tspan>s<tspan class="sb" dy="3">dense</tspan><tspan class="up" dy="-3"> + </tspan>w<tspan class="sb up" dy="3">2</tspan><tspan class="up" dy="-3">&#183;</tspan>s<tspan class="sb" dy="3">lex</tspan><tspan class="up" dy="-3"> + </tspan>w<tspan class="sb up" dy="3">3</tspan><tspan class="up" dy="-3">&#183;</tspan>s<tspan class="sb" dy="3">mul</tspan><tspan class="up mut nb" dy="-3">  (Eq. 1)</tspan></text>
+</svg>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 276" width="640" height="276" role="img"><style>
+.ink{fill:#2A3140}.mut{fill:#6B7484}.ln{stroke:#8A93A3;fill:none;stroke-width:1}
+.wd{fill:#FFFFFF;stroke:#8A93A3;stroke-width:1.1}.tk{fill:#EAF1FB;stroke:#3F7AD6;stroke-width:1.1}
+.xw{fill:#FBEDE4;stroke:#C86B44;stroke-width:1.4}.br{fill:#3F7AD6}.brm{fill:#C9CFD8}
+text{font-family:'Noto Sans Thai Variable','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:12px}
+.b{font-weight:600}.s{font-size:11px}.xs{font-size:10px}
+.m{font-family:'JetBrains Mono Variable','JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px}
+@media (prefers-color-scheme: dark){.ink{fill:#E6E9EF}.mut{fill:#9AA3B2}.ln{stroke:#7C8797}
+.wd{fill:#1A2029;stroke:#7C8797}.tk{fill:#1B2735;stroke:#5C90DE}.xw{fill:#33241C;stroke:#D8825A}.brm{fill:#3A4250}}
+</style>
+<text x="8" y="14" class="ink b s">ประโยคสั้น</text>
+<text x="8" y="30" class="mut xs">newmm — 7 คำ</text>
+<rect x="8.0" y="36" width="132.4" height="26" rx="2" class="wd"/>
+<text x="74.2" y="53.0" text-anchor="middle" class="ink" font-size="11.0">สนามบิน</text>
+<rect x="140.4" y="36" width="189.1" height="26" rx="2" class="wd"/>
+<text x="234.9" y="53.0" text-anchor="middle" class="ink" font-size="11.0">สุวรรณภูมิ</text>
+<rect x="329.5" y="36" width="75.6" height="26" rx="2" class="wd"/>
+<text x="367.3" y="53.0" text-anchor="middle" class="ink" font-size="11.0">เปิด</text>
+<rect x="405.1" y="36" width="56.7" height="26" rx="2" class="wd"/>
+<text x="433.5" y="53.0" text-anchor="middle" class="ink" font-size="11.0">ใช้</text>
+<rect x="461.8" y="36" width="94.5" height="26" rx="2" class="wd"/>
+<text x="509.1" y="53.0" text-anchor="middle" class="ink" font-size="11.0">เมื่อ</text>
+<rect x="556.4" y="36" width="37.8" height="26" rx="2" class="wd"/>
+<text x="575.3" y="53.0" text-anchor="middle" class="ink" font-size="11.0">ปี</text>
+<rect x="594.2" y="36" width="37.8" height="26" rx="2" class="wd"/>
+<text x="613.1" y="53.0" text-anchor="middle" class="ink" font-size="11.0">ใด</text>
+<text x="8" y="80" class="mut xs">XLM-R — 8 token (1.14 ต่อคำ)</text>
+<rect x="8.0" y="86" width="18.9" height="26" rx="2" class="tk"/>
+<text x="17.5" y="103.0" text-anchor="middle" class="ink" font-size="11.0">▁</text>
+<rect x="26.9" y="86" width="113.5" height="26" rx="2" class="tk"/>
+<text x="83.6" y="103.0" text-anchor="middle" class="ink" font-size="11.0">สนามบิน</text>
+<rect x="140.4" y="86" width="113.5" height="26" rx="2" class="tk"/>
+<text x="197.1" y="103.0" text-anchor="middle" class="ink" font-size="11.0">สุวรรณ</text>
+<rect x="253.8" y="86" width="75.6" height="26" rx="2" class="tk"/>
+<text x="291.6" y="103.0" text-anchor="middle" class="ink" font-size="11.0">ภูมิ</text>
+<rect x="329.5" y="86" width="75.6" height="26" rx="2" class="tk"/>
+<text x="367.3" y="103.0" text-anchor="middle" class="ink" font-size="11.0">เปิด</text>
+<rect x="405.1" y="86" width="56.7" height="26" rx="2" class="tk"/>
+<text x="433.5" y="103.0" text-anchor="middle" class="ink" font-size="11.0">ใช้</text>
+<rect x="461.8" y="86" width="132.4" height="26" rx="2" class="xw"/>
+<text x="528.0" y="103.0" text-anchor="middle" class="ink" font-size="11.0">เมื่อปี</text>
+<rect x="594.2" y="86" width="37.8" height="26" rx="2" class="tk"/>
+<text x="613.1" y="103.0" text-anchor="middle" class="ink" font-size="11.0">ใด</text>
+<text x="8" y="136" class="ink b s">ประโยคที่มีชื่อเฉพาะ วันเดือนปี และตัวเลข</text>
+<text x="8" y="152" class="mut xs">newmm — 12 คำ</text>
+<rect x="8.0" y="158" width="98.1" height="26" rx="2" class="wd"/>
+<text x="57.0" y="175.0" text-anchor="middle" class="ink" font-size="11.0">ท่าอากาศยาน</text>
+<rect x="106.1" y="158" width="89.1" height="26" rx="2" class="wd"/>
+<text x="150.6" y="175.0" text-anchor="middle" class="ink" font-size="11.0">สุวรรณภูมิ</text>
+<rect x="195.2" y="158" width="44.6" height="26" rx="2" class="wd"/>
+<text x="217.5" y="175.0" text-anchor="middle" class="ink" font-size="11.0">เริ่ม</text>
+<rect x="239.8" y="158" width="80.2" height="26" rx="2" class="wd"/>
+<text x="279.9" y="175.0" text-anchor="middle" class="ink" font-size="11.0">ให้บริการ</text>
+<rect x="320.0" y="158" width="98.1" height="26" rx="2" class="wd"/>
+<text x="369.0" y="175.0" text-anchor="middle" class="ink" font-size="11.0">เชิงพาณิชย์</text>
+<rect x="418.1" y="158" width="17.8" height="26" rx="2" class="wd"/>
+<text x="427.0" y="175.0" text-anchor="middle" class="ink" font-size="11.0">ใน</text>
+<rect x="435.9" y="158" width="44.6" height="26" rx="2" class="wd"/>
+<text x="458.2" y="175.0" text-anchor="middle" class="ink" font-size="11.0">เดือน</text>
+<rect x="480.5" y="158" width="62.4" height="26" rx="2" class="wd"/>
+<text x="511.7" y="175.0" text-anchor="middle" class="ink" font-size="11.0">กันยายน</text>
+<rect x="542.9" y="158" width="8.9" height="26" rx="2" class="wd"/>
+<text x="547.3" y="174.4" text-anchor="middle" class="ink" font-size="9.5"> </text>
+<rect x="551.8" y="158" width="35.7" height="26" rx="2" class="wd"/>
+<text x="569.6" y="175.0" text-anchor="middle" class="ink" font-size="11.0">พ.ศ.</text>
+<rect x="587.4" y="158" width="8.9" height="26" rx="2" class="wd"/>
+<text x="591.9" y="174.4" text-anchor="middle" class="ink" font-size="9.5"> </text>
+<rect x="596.3" y="158" width="35.7" height="26" rx="2" class="wd"/>
+<text x="614.2" y="175.0" text-anchor="middle" class="ink" font-size="11.0">2549</text>
+<text x="8" y="202" class="mut xs">XLM-R — 21 token (1.75 ต่อคำ)</text>
+<rect x="8.0" y="208" width="8.9" height="26" rx="2" class="tk"/>
+<text x="12.5" y="223.9" text-anchor="middle" class="ink" font-size="7.9">▁</text>
+<rect x="16.9" y="208" width="17.8" height="26" rx="2" class="tk"/>
+<text x="25.8" y="223.7" text-anchor="middle" class="ink" font-size="7.4">ท่า</text>
+<rect x="34.7" y="208" width="44.6" height="26" rx="2" class="tk"/>
+<text x="57.0" y="225.0" text-anchor="middle" class="ink" font-size="11.0">อากาศ</text>
+<rect x="79.3" y="208" width="26.7" height="26" rx="2" class="tk"/>
+<text x="92.7" y="225.0" text-anchor="middle" class="ink" font-size="11.0">ยาน</text>
+<rect x="106.1" y="208" width="53.5" height="26" rx="2" class="tk"/>
+<text x="132.8" y="225.0" text-anchor="middle" class="ink" font-size="11.0">สุวรรณ</text>
+<rect x="159.5" y="208" width="35.7" height="26" rx="2" class="tk"/>
+<text x="177.4" y="225.0" text-anchor="middle" class="ink" font-size="11.0">ภูมิ</text>
+<rect x="195.2" y="208" width="44.6" height="26" rx="2" class="tk"/>
+<text x="217.5" y="225.0" text-anchor="middle" class="ink" font-size="11.0">เริ่ม</text>
+<rect x="239.8" y="208" width="80.2" height="26" rx="2" class="tk"/>
+<text x="279.9" y="225.0" text-anchor="middle" class="ink" font-size="11.0">ให้บริการ</text>
+<rect x="320.0" y="208" width="35.7" height="26" rx="2" class="tk"/>
+<text x="337.8" y="225.0" text-anchor="middle" class="ink" font-size="11.0">เชิง</text>
+<rect x="355.7" y="208" width="62.4" height="26" rx="2" class="tk"/>
+<text x="386.9" y="225.0" text-anchor="middle" class="ink" font-size="11.0">พาณิชย์</text>
+<rect x="418.1" y="208" width="17.8" height="26" rx="2" class="tk"/>
+<text x="427.0" y="225.0" text-anchor="middle" class="ink" font-size="11.0">ใน</text>
+<rect x="435.9" y="208" width="44.6" height="26" rx="2" class="tk"/>
+<text x="458.2" y="225.0" text-anchor="middle" class="ink" font-size="11.0">เดือน</text>
+<rect x="480.5" y="208" width="26.7" height="26" rx="2" class="tk"/>
+<text x="493.8" y="225.0" text-anchor="middle" class="ink" font-size="11.0">กัน</text>
+<rect x="507.2" y="208" width="26.7" height="26" rx="2" class="tk"/>
+<text x="520.6" y="225.0" text-anchor="middle" class="ink" font-size="11.0">ยาย</text>
+<rect x="533.9" y="208" width="8.9" height="26" rx="2" class="tk"/>
+<text x="538.4" y="223.9" text-anchor="middle" class="ink" font-size="7.9">น</text>
+<rect x="542.9" y="208" width="17.8" height="26" rx="2" class="tk"/>
+<text x="551.8" y="225.0" text-anchor="middle" class="ink" font-size="11.0">▁พ</text>
+<rect x="560.7" y="208" width="8.9" height="26" rx="2" class="tk"/>
+<text x="565.1" y="224.4" text-anchor="middle" class="ink" font-size="9.5">.</text>
+<rect x="569.6" y="208" width="8.9" height="26" rx="2" class="tk"/>
+<text x="574.1" y="223.9" text-anchor="middle" class="ink" font-size="7.9">ศ</text>
+<rect x="578.5" y="208" width="8.9" height="26" rx="2" class="tk"/>
+<text x="583.0" y="224.4" text-anchor="middle" class="ink" font-size="9.5">.</text>
+<rect x="587.4" y="208" width="26.7" height="26" rx="2" class="tk"/>
+<text x="600.8" y="225.0" text-anchor="middle" class="ink" font-size="11.0">▁25</text>
+<rect x="614.2" y="208" width="17.8" height="26" rx="2" class="tk"/>
+<text x="623.1" y="225.0" text-anchor="middle" class="ink" font-size="11.0">49</text>
+<text x="8" y="266" class="mut xs">ทั้ง 6 ประโยค: ขอบเขตคำของ newmm ที่ XLM-R รักษาไว้ 52/59 (88%) · token ที่คร่อมสองคำ 4 ตัว (สีส้ม)</text>
+</svg>

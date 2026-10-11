@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-Q5MVOS3D.6qCGA5yR.js";import{n as t}from"./chunk-AMVFOWMQ.BG397M7l.js";var n=class{static{e(this,`ImperativeState`)}constructor(e){this.init=e,this.records=this.init()}static{t(this,`ImperativeState`)}reset(){this.records=this.init()}};export{n as t};
